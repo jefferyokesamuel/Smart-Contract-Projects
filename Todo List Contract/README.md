@@ -1,0 +1,13 @@
+# Todo List Smart Contract Project
+
+This is a Todo List Application made with smart contracts, .
+
+Try running some of the following tasks:
+
+```shell
+npx hardhat help
+npx hardhat test
+REPORT_GAS=true npx hardhat test
+npx hardhat node
+npx hardhat run scripts/deploy.js
+```
