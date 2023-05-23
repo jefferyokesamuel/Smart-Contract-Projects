@@ -5,5 +5,10 @@ pragma solidity ^0.8.9;
 // import "hardhat/console.sol";
 
 contract Todo {
-    
+    struct item {
+        bytes32 content;
+        address owner;
+        bool completed;
+        uint256 timestamp;
+    }
 }
