@@ -12,10 +12,10 @@ async function main() {
 
   const lockedAmount = hre.ethers.utils.parseEther("0.001");
 
-  const Lock = await hre.ethers.getContractFactory("Lock");
-  const lock = await Lock.deploy(unlockTime, { value: lockedAmount });
+  const Todo = await hre.ethers.getContractFactory("Todo");
+  const list = await Todo.deploy(unlockTime, { value: lockedAmount });
 
-  await lock.deployed();
+  await list.deployed();
 
   console.log(
     `Lock with ${ethers.utils.formatEther(
