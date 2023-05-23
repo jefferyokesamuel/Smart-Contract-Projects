@@ -11,4 +11,11 @@ contract Todo {
         bool completed;
         uint256 timestamp;
     }
+
+    uint public constant maximumItems = 50;
+
+    mapping(address => item[maximumItems]) public todos;
+   
+   mapping(address => uint256) public lastIds;
+   
 }
