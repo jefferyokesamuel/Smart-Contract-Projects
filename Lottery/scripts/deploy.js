@@ -12,15 +12,15 @@ async function main() {
 
   const lockedAmount = hre.ethers.utils.parseEther("0.001");
 
-  const Lottery = await hre.ethers.getContractFactory("Lottery");
-  const lottery = await Lottery.deploy(unlockTime, { value: lockedAmount });
+  const lotteryContract = await hre.ethers.getContractFactory("Lottery");
+  const lottery = await lotteryContract.deploy();
 
   await lottery.deployed();
 
   console.log(
-    `Lock with ${ethers.utils.formatEther(
+    `Lottery Contract with ${ethers.utils.formatEther(
       lockedAmount
-    )}ETH and unlock timestamp ${unlockTime} deployed to ${lock.address}`
+    )}ETH and unlock timestamp ${unlockTime} deployed to ${lottery.address}`
   );
 }
 
